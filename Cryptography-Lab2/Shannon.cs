@@ -162,15 +162,7 @@ namespace Cryptography_Lab2
         public static List<string> encode(ref List<string> decoded_symbols, ref List<KeyValuePair<string, string>> codes)
         {
             List<string> encoded_symbols = new List<string>();
-            //List<string> decoded_symbols = new List<string>();
 
-            /*
-            using (StreamReader reader = new StreamReader("to-encode.txt"))
-            {
-                while (!reader.EndOfStream)
-                    decoded_symbols.Add(reader.ReadLine());
-            }
-            */
             foreach (string s in decoded_symbols)
             {
                 string code = "";
@@ -186,7 +178,7 @@ namespace Cryptography_Lab2
                 encoded_symbols.Add(code);
             }
             
-            using (StreamWriter writer = new StreamWriter("encoded.txt", false))
+            using (StreamWriter writer = new StreamWriter("output.txt", false))
             {
                 foreach (string s in encoded_symbols)
                     writer.WriteLine(s);
@@ -197,16 +189,7 @@ namespace Cryptography_Lab2
 
         public static List<string> decode(ref List<string> encoded_symbols, ref List<KeyValuePair<string, string>> codes)
         {
-            //List<string> encoded_symbols = new List<string>();
             List<string> decoded_symbols = new List<string>();
-
-            /*
-            using (StreamReader reader = new StreamReader("to_decode.txt"))
-            {
-                while (!reader.EndOfStream)
-                    encoded_symbols.Add(reader.ReadLine());
-            }
-            */
 
             foreach (string s in encoded_symbols)
             {
@@ -221,13 +204,11 @@ namespace Cryptography_Lab2
 
                 decoded_symbols.Add(symbol);
             }
-            /*
-            using (StreamWriter writer = new StreamWriter("decoded.txt", false))
+            using (StreamWriter writer = new StreamWriter("output.txt", false))
             {
                 foreach (string s in decoded_symbols)
                     writer.WriteLine(s);
             }
-            */
 
             return decoded_symbols;
         }

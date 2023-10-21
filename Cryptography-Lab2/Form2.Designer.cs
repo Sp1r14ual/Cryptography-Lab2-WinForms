@@ -46,6 +46,11 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            label8 = new Label();
+            richTextBox3 = new RichTextBox();
+            checkBox1 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox3 = new CheckBox();
             SuspendLayout();
             // 
             // label1
@@ -71,7 +76,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(106, 176);
+            label2.Location = new Point(106, 182);
             label2.Name = "label2";
             label2.Size = new Size(506, 28);
             label2.TabIndex = 2;
@@ -79,10 +84,10 @@
             // 
             // textBox2
             // 
-            textBox2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(106, 216);
+            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(106, 224);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(266, 30);
+            textBox2.Size = new Size(266, 34);
             textBox2.TabIndex = 3;
             textBox2.Text = "0,10 0,20 0,10 0,10 0,35 0,15";
             // 
@@ -90,7 +95,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(874, 61);
+            label3.Location = new Point(1032, 61);
             label3.Name = "label3";
             label3.Size = new Size(349, 28);
             label3.TabIndex = 5;
@@ -98,7 +103,7 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(778, 102);
+            richTextBox1.Location = new Point(934, 102);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(511, 174);
             richTextBox1.TabIndex = 6;
@@ -107,7 +112,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(874, 283);
+            button1.Location = new Point(934, 313);
             button1.Name = "button1";
             button1.Size = new Size(141, 40);
             button1.TabIndex = 7;
@@ -119,7 +124,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(923, 382);
+            label4.Location = new Point(1075, 429);
             label4.Name = "label4";
             label4.Size = new Size(238, 28);
             label4.TabIndex = 8;
@@ -127,7 +132,7 @@
             // 
             // richTextBox2
             // 
-            richTextBox2.Location = new Point(778, 433);
+            richTextBox2.Location = new Point(934, 469);
             richTextBox2.Name = "richTextBox2";
             richTextBox2.Size = new Size(511, 174);
             richTextBox2.TabIndex = 9;
@@ -145,6 +150,7 @@
             // 
             // textBox3
             // 
+            textBox3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             textBox3.Location = new Point(106, 433);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
@@ -163,6 +169,7 @@
             // 
             // textBox4
             // 
+            textBox4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             textBox4.Location = new Point(106, 518);
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
@@ -181,6 +188,7 @@
             // 
             // textBox5
             // 
+            textBox5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             textBox5.Location = new Point(106, 602);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
@@ -190,7 +198,7 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(106, 283);
+            button2.Location = new Point(106, 313);
             button2.Name = "button2";
             button2.Size = new Size(217, 40);
             button2.TabIndex = 16;
@@ -201,7 +209,7 @@
             // button3
             // 
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(329, 283);
+            button3.Location = new Point(329, 313);
             button3.Name = "button3";
             button3.Size = new Size(141, 40);
             button3.TabIndex = 17;
@@ -212,7 +220,7 @@
             // button4
             // 
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(1021, 283);
+            button4.Location = new Point(1081, 313);
             button4.Name = "button4";
             button4.Size = new Size(141, 40);
             button4.TabIndex = 18;
@@ -220,11 +228,65 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(106, 668);
+            label8.Name = "label8";
+            label8.Size = new Size(163, 28);
+            label8.TabIndex = 19;
+            label8.Text = "Кодовые слова";
+            // 
+            // richTextBox3
+            // 
+            richTextBox3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            richTextBox3.Location = new Point(106, 699);
+            richTextBox3.Name = "richTextBox3";
+            richTextBox3.Size = new Size(511, 174);
+            richTextBox3.TabIndex = 20;
+            richTextBox3.Text = "";
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(106, 142);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(132, 24);
+            checkBox1.TabIndex = 21;
+            checkBox1.Text = "Ввод из файла";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(106, 260);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(132, 24);
+            checkBox2.TabIndex = 22;
+            checkBox2.Text = "Ввод из файла";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(934, 282);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(132, 24);
+            checkBox3.TabIndex = 23;
+            checkBox3.Text = "Ввод из файла";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1482, 753);
+            ClientSize = new Size(1482, 953);
+            Controls.Add(checkBox3);
+            Controls.Add(checkBox2);
+            Controls.Add(checkBox1);
+            Controls.Add(richTextBox3);
+            Controls.Add(label8);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -270,5 +332,10 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private Label label8;
+        private RichTextBox richTextBox3;
+        private CheckBox checkBox1;
+        private CheckBox checkBox2;
+        private CheckBox checkBox3;
     }
 }

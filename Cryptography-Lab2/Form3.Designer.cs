@@ -46,6 +46,11 @@
             button4 = new Button();
             label4 = new Label();
             richTextBox2 = new RichTextBox();
+            checkBox1 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox3 = new CheckBox();
+            label8 = new Label();
+            richTextBox3 = new RichTextBox();
             SuspendLayout();
             // 
             // label1
@@ -79,17 +84,17 @@
             // 
             // textBox2
             // 
-            textBox2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.Location = new Point(106, 216);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(266, 30);
+            textBox2.Size = new Size(266, 34);
             textBox2.TabIndex = 4;
             textBox2.Text = "0,10 0,20 0,10 0,10 0,35 0,15";
             // 
             // button2
             // 
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(106, 283);
+            button2.Location = new Point(106, 312);
             button2.Name = "button2";
             button2.Size = new Size(217, 40);
             button2.TabIndex = 17;
@@ -100,7 +105,7 @@
             // button3
             // 
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(329, 283);
+            button3.Location = new Point(329, 312);
             button3.Name = "button3";
             button3.Size = new Size(141, 40);
             button3.TabIndex = 18;
@@ -120,6 +125,7 @@
             // 
             // textBox3
             // 
+            textBox3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             textBox3.Location = new Point(106, 433);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
@@ -138,6 +144,7 @@
             // 
             // textBox4
             // 
+            textBox4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             textBox4.Location = new Point(106, 518);
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
@@ -156,6 +163,7 @@
             // 
             // textBox5
             // 
+            textBox5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             textBox5.Location = new Point(106, 602);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
@@ -166,7 +174,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(874, 61);
+            label3.Location = new Point(852, 61);
             label3.Name = "label3";
             label3.Size = new Size(372, 28);
             label3.TabIndex = 25;
@@ -183,7 +191,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(874, 283);
+            button1.Location = new Point(778, 312);
             button1.Name = "button1";
             button1.Size = new Size(141, 40);
             button1.TabIndex = 27;
@@ -194,7 +202,7 @@
             // button4
             // 
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(1021, 283);
+            button4.Location = new Point(925, 312);
             button4.Name = "button4";
             button4.Size = new Size(141, 40);
             button4.TabIndex = 28;
@@ -206,7 +214,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(923, 382);
+            label4.Location = new Point(915, 456);
             label4.Name = "label4";
             label4.Size = new Size(243, 28);
             label4.TabIndex = 29;
@@ -214,17 +222,71 @@
             // 
             // richTextBox2
             // 
-            richTextBox2.Location = new Point(778, 433);
+            richTextBox2.Location = new Point(778, 487);
             richTextBox2.Name = "richTextBox2";
             richTextBox2.Size = new Size(511, 174);
             richTextBox2.TabIndex = 30;
             richTextBox2.Text = "";
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(106, 142);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(132, 24);
+            checkBox1.TabIndex = 31;
+            checkBox1.Text = "Ввод из файла";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(106, 253);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(132, 24);
+            checkBox2.TabIndex = 32;
+            checkBox2.Text = "Ввод из файла";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(778, 282);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(132, 24);
+            checkBox3.TabIndex = 33;
+            checkBox3.Text = "Ввод из файла";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(106, 662);
+            label8.Name = "label8";
+            label8.Size = new Size(163, 28);
+            label8.TabIndex = 34;
+            label8.Text = "Кодовые слова";
+            // 
+            // richTextBox3
+            // 
+            richTextBox3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            richTextBox3.Location = new Point(106, 693);
+            richTextBox3.Name = "richTextBox3";
+            richTextBox3.Size = new Size(511, 174);
+            richTextBox3.TabIndex = 35;
+            richTextBox3.Text = "";
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1482, 753);
+            ClientSize = new Size(1482, 953);
+            Controls.Add(richTextBox3);
+            Controls.Add(label8);
+            Controls.Add(checkBox3);
+            Controls.Add(checkBox2);
+            Controls.Add(checkBox1);
             Controls.Add(richTextBox2);
             Controls.Add(label4);
             Controls.Add(button4);
@@ -270,5 +332,10 @@
         private Button button4;
         private Label label4;
         private RichTextBox richTextBox2;
+        private CheckBox checkBox1;
+        private CheckBox checkBox2;
+        private CheckBox checkBox3;
+        private Label label8;
+        private RichTextBox richTextBox3;
     }
 }
