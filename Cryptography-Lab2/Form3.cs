@@ -77,11 +77,11 @@ namespace Cryptography_Lab2
                 }
 
                 //проверка поля с последовательностью
-                foreach (char s in richTextBox1.Text)
-                {
-                    if (!(s == '0' || s == '1' || s == ' '))
-                        throw new Exception("Один или несколько символов последовательности некорректны");
-                }
+                foreach (string s in sequence)
+                    foreach (char c in s)
+                        if (!(c == '0' || c == '1' || c == ' '))
+                            throw new Exception("Один или несколько символов последовательности некорректны");
+
             }
             catch (Exception ex)
             {
