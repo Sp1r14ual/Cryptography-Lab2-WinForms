@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 using System.IO;
+using System.Runtime.InteropServices;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Cryptography_Lab2
@@ -92,7 +93,7 @@ namespace Cryptography_Lab2
             return codes;
         }
 
-        public static int calculate_average_code_length(ref List<KeyValuePair<string, string>> codes)
+        public static double calculate_average_code_length(ref List<KeyValuePair<string, string>> codes)
         {
             int sum = 0;
             int n = codes.Count();
@@ -100,9 +101,7 @@ namespace Cryptography_Lab2
             foreach (KeyValuePair<string, string> code in codes)
                 sum += code.Value.Length;
 
-            double res = sum / n;
-
-            return Convert.ToInt32(Math.Round(res)); //?
+            return sum / n;
         }
 
         public static double entropy(ref List<KeyValuePair<string, double>> assembly)
@@ -115,12 +114,10 @@ namespace Cryptography_Lab2
             return entropy;
         }
 
-        public static double redundancy(ref List<KeyValuePair<string, double>> assembly)
+        public static double redundancy(ref List<KeyValuePair<string, double>> assembly, ref List<KeyValuePair<string, string>> codes)
         {
-            double H = entropy(ref assembly);
-            double H_max = Math.Log2(assembly.Count());
-            double K = 1 - H / H_max;
-            return K;
+            double r = calculate_average_code_length(ref codes) - entropy(ref assembly);
+            return r;
         }
 
         public static bool kraft_mcmillan_inequality_check(ref List<KeyValuePair<string, string>> codes)
@@ -137,7 +134,7 @@ namespace Cryptography_Lab2
             return sum <= 1;
         }
 
-        public static (int, double, string) calculate_properties(ref List<KeyValuePair<string, double>> assembly, ref List<KeyValuePair<string, string>> codes)
+        public static (double, double, string) calculate_properties(ref List<KeyValuePair<string, double>> assembly, ref List<KeyValuePair<string, string>> codes)
         {
             /*
             using (StreamWriter writer = new StreamWriter("properties.txt", false))
@@ -151,8 +148,8 @@ namespace Cryptography_Lab2
                 writer.WriteLine("Неравенство Крафта-Макмиллана " + (kraft_mcmillan_inequality_check(ref codes) ? "выполняется" : "не выполняется"));
             }
             */
-            int avg_code_length = calculate_average_code_length(ref codes);
-            double redundancy = Shannon.redundancy(ref assembly);
+            double avg_code_length = calculate_average_code_length(ref codes);
+            double redundancy = Shannon.redundancy(ref assembly, ref codes);
             string kraft_inequality = kraft_mcmillan_inequality_check(ref codes) ? "Выполняется" : "Не Выполняется";
 
             return (avg_code_length, redundancy, kraft_inequality);

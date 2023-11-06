@@ -157,7 +157,7 @@ namespace Cryptography_Lab2
 
             List<KeyValuePair<string, double>> assembly = Shannon.generate_assembly(ref alphabet, ref p_s);
 
-            (int, double, string) props = Shannon.calculate_properties(ref assembly, ref codes);
+            (double, double, string) props = Shannon.calculate_properties(ref assembly, ref codes);
 
             string code_words = "";
 
