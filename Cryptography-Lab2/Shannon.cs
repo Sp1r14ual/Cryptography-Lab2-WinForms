@@ -120,7 +120,7 @@ namespace Cryptography_Lab2
             return r;
         }
 
-        public static bool kraft_mcmillan_inequality_check(ref List<KeyValuePair<string, string>> codes)
+        public static (bool, double) kraft_mcmillan_inequality_check(ref List<KeyValuePair<string, string>> codes)
         {
             double sum = 0;
             List<int> lx = new List<int>();
@@ -131,7 +131,7 @@ namespace Cryptography_Lab2
             foreach (double l in lx)
                 sum += Math.Pow(2, -l);
 
-            return sum <= 1;
+            return (sum <= 1, sum);
         }
 
         public static (double, double, string) calculate_properties(ref List<KeyValuePair<string, double>> assembly, ref List<KeyValuePair<string, string>> codes)
@@ -150,9 +150,10 @@ namespace Cryptography_Lab2
             */
             double avg_code_length = calculate_average_code_length(ref codes);
             double redundancy = Shannon.redundancy(ref assembly, ref codes);
-            string kraft_inequality = kraft_mcmillan_inequality_check(ref codes) ? "Выполняется" : "Не Выполняется";
+            (bool, double) kraft_inequality = kraft_mcmillan_inequality_check(ref codes);
+            string kraft_inequality_string = (kraft_inequality.Item1 ? "Выполняется" : "Не выполняется") + ": " + Convert.ToDouble(kraft_inequality.Item2) + (kraft_inequality.Item1 ? " <= 1" : " > 1");
 
-            return (avg_code_length, redundancy, kraft_inequality);
+            return (avg_code_length, redundancy, kraft_inequality_string);
 
         }
 
